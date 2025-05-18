@@ -1,57 +1,57 @@
-[06:17:55] [ServerMain/INFO]: [bootstrap] Running Java 23 (Java HotSpot(TM) 64-Bit Server VM 23.0.2+7-58; Oracle Corporation null) on Windows 10 10.0 (amd64)
-[06:17:55] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-56-main@b4051db (2024-12-27T22:19:13Z) for Minecraft 1.21.4
-[06:17:56] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[06:17:57] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\element-core-1.0.0-ff9e65e.dirty.jar'...
-[06:17:58] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\element-core-1.0.0-ff9e65e.dirty.jar' in 1388ms.
-[06:17:58] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[06:17:58] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+[07:53:45] [ServerMain/INFO]: [bootstrap] Running Java 23 (Java HotSpot(TM) 64-Bit Server VM 23.0.2+7-58; Oracle Corporation null) on Windows 10 10.0 (amd64)
+[07:53:45] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-56-main@b4051db (2024-12-27T22:19:13Z) for Minecraft 1.21.4
+[07:53:46] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[07:53:47] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\element-core-1.0.0-c1de3cd.dirty.jar'...
+[07:53:48] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\element-core-1.0.0-c1de3cd.dirty.jar' in 1654ms.
+[07:53:49] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[07:53:49] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
  - Element-core (1.0.0)
-[06:18:06] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[06:18:10] [ServerMain/INFO]: Loaded 1370 recipes
-[06:18:10] [ServerMain/INFO]: Loaded 1481 advancements
-[06:18:10] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
-[06:18:10] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 348,6ms
-[06:18:10] [Server thread/INFO]: Starting minecraft server version 1.21.4
-[06:18:10] [Server thread/INFO]: Loading properties
-[06:18:10] [Server thread/INFO]: This server is running Paper version 1.21.4-56-main@b4051db (2024-12-27T22:19:13Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
-[06:18:10] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[06:18:10] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[06:18:10] [Server thread/INFO]: Using 4 threads for Netty based IO
-[06:18:12] [Server thread/INFO]: [MoonriseCommon] Paper is using 4 worker threads, 1 I/O threads
-[06:18:12] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[06:18:12] [Server thread/INFO]: Default game type: SURVIVAL
-[06:18:12] [Server thread/INFO]: Generating keypair
-[06:18:12] [Server thread/INFO]: Starting Minecraft server on *:25565
-[06:18:12] [Server thread/INFO]: Using default channel type
-[06:18:12] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[06:18:12] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[06:18:12] [Server thread/ERROR]: [ModernPluginLoadingStrategy] Ambiguous plugin name 'Element-core' for files 'plugins\.paper-remapped\element-core-1.0.0-48d91e5.dirty.jar' and 'plugins\.paper-remapped\element-core-1.0.0-48d91e5.dirty-dev-all.jar' in 'plugins\.paper-remapped'
-[06:18:12] [Server thread/ERROR]: [ModernPluginLoadingStrategy] Ambiguous plugin name 'Element-core' for files 'plugins\.paper-remapped\element-core-1.0.0-ff9e65e.dirty.jar' and 'plugins\.paper-remapped\element-core-1.0.0-48d91e5.dirty.jar' in 'plugins\.paper-remapped'
-[06:18:12] [Server thread/INFO]: [Element-core] Loading server plugin Element-core v1.0.0
-[06:18:12] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[06:18:12] [Server thread/INFO]: Preparing level "world"
-[06:18:13] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[06:18:13] [Server thread/INFO]: Preparing spawn area: 0%
-[06:18:14] [Server thread/INFO]: Preparing spawn area: 0%
-[06:18:14] [Server thread/INFO]: Preparing spawn area: 18%
-[06:18:14] [Server thread/INFO]: Time elapsed: 1222 ms
-[06:18:14] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[06:18:14] [Server thread/INFO]: Preparing spawn area: 0%
-[06:18:14] [Server thread/INFO]: Time elapsed: 169 ms
-[06:18:14] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[06:18:14] [Server thread/INFO]: Preparing spawn area: 0%
-[06:18:15] [Server thread/INFO]: Time elapsed: 126 ms
-[06:18:15] [Server thread/INFO]: [Element-core] Enabling Element-core v1.0.0
-[06:18:15] [Server thread/INFO]: [Element-core] Messages file loaded with gamemode-usage: §cUsage: /gm <0-3|survival|creative|adventure|spectator> [player]
-[06:18:15] [Server thread/INFO]: [org.reflections.Reflections] Reflections took 283 ms to scan 1 urls, producing 1 keys and 2 values
-[06:18:15] [Server thread/INFO]: [org.reflections.Reflections] Reflections took 4 ms to scan 1 urls, producing 1 keys and 1 values
-[06:18:15] [Server thread/INFO]: [spark] Starting background profiler...
-[06:18:15] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows10/amd64), so the built-in Java engine will be used instead.
-[06:18:16] [Server thread/INFO]: Done preparing level "world" (3.211s)
-[06:18:16] [Server thread/INFO]: Running delayed init tasks
-[06:18:16] [Server thread/INFO]: Done (22.056s)! For help, type "help"
-[06:18:19] [User Authenticator #0/INFO]: UUID of player rapaziada is 05decf7b-27eb-4551-a31e-49e1fd132a5a
-[06:18:20] [Server thread/INFO]: rapaziada[/127.0.0.1:63292] logged in with entity id 19 at ([world]-584.2779172731174, 63.0, 104.12658261971738)
-[06:18:20] [Server thread/WARN]: [ca.spottedleaf.moonrise.patches.chunk_system.level.entity.EntityLookup] Entity uuid already exists: d10fdb20-8130-411b-ac10-f9673e3eeaf4, mapped to Bat['Bat'/25, uuid='d10fdb20-8130-411b-ac10-f9673e3eeaf4', l='ServerLevel[world]', x=-597.59, y=-43.90, z=96.41, cpos=[-38, 6], tl=462, v=true], can't add Bat['Bat'/34, uuid='d10fdb20-8130-411b-ac10-f9673e3eeaf4', l='ServerLevel[world]', x=-598.09, y=-44.78, z=93.83, cpos=[-38, 5], tl=440, v=false]
-[06:18:22] [Server thread/INFO]: rapaziada issued server command: /gm
-[06:18:23] [Server thread/INFO]: rapaziada issued server command: /gm 1
+[07:53:57] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[07:54:00] [ServerMain/INFO]: Loaded 1370 recipes
+[07:54:00] [ServerMain/INFO]: Loaded 1481 advancements
+[07:54:00] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[07:54:01] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 377,8ms
+[07:54:01] [Server thread/INFO]: Starting minecraft server version 1.21.4
+[07:54:01] [Server thread/INFO]: Loading properties
+[07:54:01] [Server thread/INFO]: This server is running Paper version 1.21.4-56-main@b4051db (2024-12-27T22:19:13Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
+[07:54:01] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[07:54:01] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[07:54:01] [Server thread/INFO]: Using 4 threads for Netty based IO
+[07:54:02] [Server thread/INFO]: [MoonriseCommon] Paper is using 4 worker threads, 1 I/O threads
+[07:54:02] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[07:54:03] [Server thread/INFO]: Default game type: SURVIVAL
+[07:54:03] [Server thread/INFO]: Generating keypair
+[07:54:03] [Server thread/INFO]: Starting Minecraft server on *:25565
+[07:54:03] [Server thread/INFO]: Using default channel type
+[07:54:03] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[07:54:03] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[07:54:03] [Server thread/INFO]: [Element-core] Loading server plugin Element-core v1.0.0
+[07:54:03] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[07:54:03] [Server thread/INFO]: Preparing level "world"
+[07:54:04] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[07:54:04] [Server thread/INFO]: Preparing spawn area: 0%
+[07:54:04] [Server thread/INFO]: Preparing spawn area: 8%
+[07:54:05] [Server thread/INFO]: Preparing spawn area: 40%
+[07:54:05] [Server thread/INFO]: Time elapsed: 1313 ms
+[07:54:05] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[07:54:05] [Server thread/INFO]: Preparing spawn area: 0%
+[07:54:05] [Server thread/INFO]: Time elapsed: 271 ms
+[07:54:05] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[07:54:05] [Server thread/INFO]: Preparing spawn area: 0%
+[07:54:05] [Server thread/INFO]: Time elapsed: 163 ms
+[07:54:05] [Server thread/INFO]: [Element-core] Enabling Element-core v1.0.0
+[07:54:06] [Server thread/INFO]: [org.reflections.Reflections] Reflections took 353 ms to scan 1 urls, producing 1 keys and 3 values
+[07:54:06] [Server thread/INFO]: [org.reflections.Reflections] Reflections took 3 ms to scan 1 urls, producing 1 keys and 1 values
+[07:54:06] [Server thread/INFO]: [spark] Starting background profiler...
+[07:54:06] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows10/amd64), so the built-in Java engine will be used instead.
+[07:54:07] [Server thread/INFO]: Done preparing level "world" (3.569s)
+[07:54:07] [Server thread/INFO]: Running delayed init tasks
+[07:54:07] [Server thread/INFO]: Done (23.199s)! For help, type "help"
+[07:54:13] [User Authenticator #0/INFO]: UUID of player rapaziada is 05decf7b-27eb-4551-a31e-49e1fd132a5a
+[07:54:13] [Server thread/INFO]: rapaziada[/127.0.0.1:49336] logged in with entity id 19 at ([world]897.4373763588188, 104.0, -1465.4971835592987)
+[07:54:16] [Server thread/INFO]: rapaziada issued server command: /ec
+[07:54:25] [Server thread/INFO]: rapaziada issued server command: /ec
+[07:54:26] [Server thread/INFO]: rapaziada issued server command: /ec
+[08:13:56] [Server thread/INFO]: rapaziada has made the advancement [Cover Me with Diamonds]
+[08:13:59] [Server thread/INFO]: rapaziada issued server command: /ec
+[08:14:03] [Server thread/INFO]: rapaziada issued server command: /ec
