@@ -28,6 +28,12 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
+tasks.processResources {
+    from("src/main/resources") {
+        include("**/*.yml")
+        into("")
+    }
+}
 
 bukkit {
     name = "Element-core"
@@ -90,13 +96,9 @@ val runServer by tasks.registering(Exec::class) {
     dependsOn(tasks.shadowJar)
 
     doFirst {
-        // Create plugin and server folders
         pluginsDir.asFile.mkdirs()
 
-        // Accept EULA
         file("run-server/eula.txt").writeText("eula=true\n")
-
-        // Copy plugin jar
         copy {
             from(tasks.shadowJar.get().archiveFile)
             into(pluginsDir)
@@ -118,4 +120,8 @@ val runServer by tasks.registering(Exec::class) {
 
     workingDir = serverDir.asFile
     commandLine("java", "-jar", paperJarName, "nogui")
+}
+
+tasks.processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

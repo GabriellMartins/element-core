@@ -6,7 +6,10 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 @Getter
 public class Configuration {
@@ -25,18 +28,28 @@ public class Configuration {
 
     public void reload() {
         if (!file.exists()) {
+            plugin.getLogger().info("Creating default configuration: " + name);
             try {
                 plugin.saveResource(name, false);
-            } catch (IllegalArgumentException ignored) {
+            } catch (IllegalArgumentException e) {
+                plugin.getLogger().warning("Default resource not found in JAR: " + name);
                 try {
                     file.getParentFile().mkdirs();
                     file.createNewFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
                 }
             }
         }
-        this.config = YamlConfiguration.loadConfiguration(file);
+
+        config = YamlConfiguration.loadConfiguration(file);
+
+        InputStream defaultConfigStream = plugin.getResource(name);
+        if (defaultConfigStream != null) {
+            YamlConfiguration defaultConfig = YamlConfiguration.loadConfiguration(
+                    new InputStreamReader(defaultConfigStream, StandardCharsets.UTF_8));
+            config.setDefaults(defaultConfig);
+        }
     }
 
     public void save() {
@@ -57,7 +70,11 @@ public class Configuration {
     }
 
     public String getString(String path) {
-        return ChatColor.translateAlternateColorCodes('&', config.getString(path, "§cMessage not found: " + path));
+        if (!config.contains(path)) {
+            plugin.getLogger().warning("Missing message key: " + path);
+            return ChatColor.RED + "Message not found: " + path;
+        }
+        return ChatColor.translateAlternateColorCodes('&', config.getString(path));
     }
 
     public boolean contains(String path) {
