@@ -1,0 +1,42 @@
+no-permission: "&cYou don't have permission to use this command."
+
+# Gamemode Command
+gamemode-usage: "&cUsage: /gm <0-3|survival|creative|adventure|spectator> [player]"
+gamemode-invalid: "&cInvalid gamemode: &f{input}"
+gamemode-player-null: "&cPlayer not found or missing target (console must specify a player)."
+gamemode-set-other: "&aSet &e{target}&a to &b{mode}."
+gamemode-set-self: "&aYour gamemode is now &b{mode}."
+
+# God Command
+god-enabled: "&aGod mode enabled."
+god-disabled: "&cGod mode disabled."
+god-enabled-other: "&aGod mode enabled for &e{target}&a."
+god-disabled-other: "&cGod mode disabled for &e{target}&c."
+god-player-null: "&cPlayer not found or missing target (console must specify a player)."
+
+# EnderChest Command
+enderchest-open: "&aOpened your ender chest."
+enderchest-open-other: "&aOpened ender chest of &e{target}&a."
+enderchest-player-null: "&cPlayer not found or missing target (console must specify a player)."
+
+# OpenInv Command
+openinv-success: "&aOpened inventory of &e{target}&a."
+openinv-player-null: "&cPlayer not found or missing target (console must specify a player)."
+
+# Fix Command
+fix-no-item: "&cYou must hold an item in your hand."
+fix-success: "&aItem repaired!"
+
+# TPA Command
+tpa-request-sent: "&aTPA request sent to &e{target}&a."
+tpa-request-received: "&e{sender} &ahas requested to teleport to you. Type &e/tpaccept &ato accept or &c/tpdeny &cto deny."
+tpa-no-request: "&cYou have no pending teleport requests."
+tpa-accepted: "&aTeleport request accepted."
+tpa-denied: "&cTeleport request denied."
+
+# Trash Command
+trash-opened: "&7Trash menu opened. Items placed will be deleted when you close the menu."
+
+# General
+player-only: "&cThis command can only be used by players."
+console-must-specify: "&cConsole must specify a player."
