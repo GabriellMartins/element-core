@@ -31,3 +31,26 @@ god-enabled-self: "§aYou are now in god mode."
 god-disabled-self: "§cYou are no longer in god mode."
 god-enabled-other: "§a{player} is now in god mode."
 god-disabled-other: "§c{player} is no longer in god mode."
+
+tpa:
+  usage:
+    - "&cUsage:"
+    - "&e/tpa <player> &7- Send teleport request"
+    - "&e/tpa accept &7- Accept a request"
+    - "&e/tpa deny &7- Deny a request"
+  not-player: "&cOnly players can use this command."
+  not-found: "&cPlayer not found."
+  self: "&cYou can't send a teleport request to yourself."
+  sent: "&aTeleport request sent to &e{player}&a."
+  received: "&e{player} &7wants to teleport to you."
+  info: "&aType &e/tpa accept &ato accept or &e/tpa deny &ato deny. &7(30s)"
+  cooldown: "&cYou must wait &e{time} &cbefore sending another teleport request."
+  expired: "&cYour teleport request to &e{player} &cexpired."
+  none: "&cYou have no pending teleport requests."
+  accept:
+    sender: "&aYou accepted &e{player}&a's teleport request."
+    target: "&aYour teleport request to &e{player}&a was accepted."
+  deny:
+    sender: "&eYou denied the teleport request."
+    target: "&cYour teleport request to &e{player}&c was denied."
+
