@@ -1,45 +1,33 @@
 package dev.github.gabrielmartins.utils.listener;
 
 import dev.github.gabrielmartins.Engine;
+import io.github.classgraph.ClassGraph;
+import io.github.classgraph.ScanResult;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
-import org.reflections.Reflections;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
-import java.util.Set;
 
 public class LoaderListener {
 
     public LoaderListener load(String basePackage) {
-        Reflections reflections = new Reflections(basePackage);
-        Set<Class<? extends Listener>> listeners = reflections.getSubTypesOf(Listener.class);
+        try (ScanResult scanResult = new ClassGraph()
+                .enableClassInfo()
+                .acceptPackages(basePackage)
+                .scan()) {
 
-        for (Class<? extends Listener> clazz : listeners) {
-            if (Modifier.isAbstract(clazz.getModifiers())) continue;
+            for (Class<?> clazz : scanResult.getClassesImplementing(Listener.class.getName()).loadClasses()) {
+                if (Modifier.isAbstract(clazz.getModifiers())) continue;
+                if (!Listener.class.isAssignableFrom(clazz)) continue;
 
-            try {
-                Listener instance;
-
-                Constructor<?>[] constructors = clazz.getDeclaredConstructors();
-                Constructor<?> target = null;
-
-                for (Constructor<?> constructor : constructors) {
-                    if (constructor.getParameterCount() == 0) {
-                        target = constructor;
-                        break;
-                    }
+                try {
+                    Listener instance = (Listener) clazz.getDeclaredConstructor().newInstance();
+                    Bukkit.getPluginManager().registerEvents(instance, Engine.getEngine());
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-
-                if (target == null) continue;
-
-                target.setAccessible(true);
-                instance = (Listener) target.newInstance();
-
-                Bukkit.getPluginManager().registerEvents(instance, Engine.getEngine());
-            } catch (Exception ignored) {}
+            }
         }
-
         return this;
     }
 }

@@ -4,5 +4,11 @@
     "name": "rapaziada",
     "level": 4,
     "bypassesPlayerLimit": true
+  },
+  {
+    "uuid": "7fb38974-dc49-4591-8a95-bd20ab273acf",
+    "name": "ViiictorXD",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]

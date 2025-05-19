@@ -15,8 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequiredArgsConstructor
 public class CooldownGroup {
 
-    @Getter
-    private final String name;
+    @Getter private final String name;
 
     private final Map<UUID, Cooldown> cooldowns = new ConcurrentHashMap<>();
     private final Map<UUID, Long> warnedPlayers = new ConcurrentHashMap<>();
@@ -42,9 +41,6 @@ public class CooldownGroup {
 
     private void markWarned(UUID uuid) {
         warnedPlayers.put(uuid, System.currentTimeMillis());
-    }
-    public void remove(UUID uuid) {
-        cooldowns.remove(uuid);
     }
 
     public void runWithCooldown(Player player, long milliseconds, Runnable onFinish, Runnable onCooldown) {

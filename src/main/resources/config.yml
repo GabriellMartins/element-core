@@ -1,0 +1,4 @@
+inventories:
+  trash:
+    size: 5
+    title: "§cTrash Bin"

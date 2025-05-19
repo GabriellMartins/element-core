@@ -5,6 +5,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
     id("com.palantir.git-version") version "3.0.0"
+    id("io.freefair.lombok") version "8.4"
 }
 
 group = "dev.github.gabrielmartins"
@@ -16,11 +17,16 @@ repositories {
     mavenCentral()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://oss.sonatype.org/content/repositories/snapshots/")
+    maven("https://jitpack.io")
+    maven("https://libraries.minecraft.net")
+
 }
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
-    implementation("org.reflections:reflections:0.10.2")
+    implementation("io.github.classgraph:classgraph:4.8.165")
+    implementation("com.mojang:authlib:1.5.25")
+    implementation("org.jetbrains:annotations:24.0.1")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")

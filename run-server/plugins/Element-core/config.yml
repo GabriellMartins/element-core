@@ -1,0 +1,4 @@
+inventories:
+  trash:
+    size: 3 # Maximu é até 6!
+    title: "§cTrash Bin"
